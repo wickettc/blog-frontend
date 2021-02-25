@@ -1,20 +1,25 @@
-import React, { useEffect } from 'react';
-import { getBlogPosts } from './api/blogCall';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import PostPage from './pages/PostPage';
+import './App.css';
 
-function App() {
-    useEffect(() => {
-        const fetchData = async () => {
-            const res = await getBlogPosts();
-            console.log(res);
-        };
-        fetchData();
-    }, []);
-
+const App = () => {
     return (
         <div className="App">
-            <div>App</div>
+            <Router>
+                {/* NavBar */}
+                <Switch>
+                    <Route exact path="/" render={() => <Home />} />
+                    <Route
+                        exact
+                        path="/post/:id"
+                        render={({ match }) => <PostPage match={match} />}
+                    />
+                </Switch>
+            </Router>
         </div>
     );
-}
+};
 
 export default App;

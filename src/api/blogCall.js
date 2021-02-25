@@ -9,4 +9,15 @@ const getBlogPosts = async () => {
     }
 };
 
-export { getBlogPosts };
+const getBlogPost = async (matchURL) => {
+    try {
+        const response = await axios.get(
+            `http://localhost:3000/blog/post/${matchURL}`
+        );
+        return response.data;
+    } catch (err) {
+        console.error(err);
+    }
+};
+
+export { getBlogPosts, getBlogPost };
