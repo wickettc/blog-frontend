@@ -24,7 +24,9 @@ const PostPage = ({ match }) => {
 
     return (
         <div>
-            {showAddComment ? <AddComment handleClose={handleClose} /> : null}
+            {showAddComment ? (
+                <AddComment id={post._id} handleClose={handleClose} />
+            ) : null}
             {_.isEmpty(post) ? (
                 <div className="loader"></div>
             ) : (
