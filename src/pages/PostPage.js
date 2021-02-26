@@ -43,21 +43,26 @@ const PostPage = ({ match }) => {
                     </div>
                     <div className="comments-container">
                         <h3>Comments</h3>
-                        <button onClick={() => setShowAddComment(true)}>
-                            Add a Comment
-                        </button>
+                        {showAddComment ? null : (
+                            <button onClick={() => setShowAddComment(true)}>
+                                Add a Comment
+                            </button>
+                        )}
                         {comments.length === 0 ? (
                             <div>Nothing to display</div>
                         ) : (
-                            comments.map(({ commentbody, time }, index) => {
-                                return (
-                                    <CommentDiv
-                                        key={index}
-                                        commentbody={commentbody}
-                                        time={time}
-                                    />
-                                );
-                            })
+                            comments.map(
+                                ({ author, commentbody, time }, index) => {
+                                    return (
+                                        <CommentDiv
+                                            key={index}
+                                            author={author}
+                                            commentbody={commentbody}
+                                            time={time}
+                                        />
+                                    );
+                                }
+                            )
                         )}
                     </div>
                 </div>

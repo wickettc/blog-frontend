@@ -20,11 +20,12 @@ const getBlogPost = async (matchURL) => {
     }
 };
 
-const postComment = async (postId, commentbody) => {
+const postComment = async (author, postId, commentbody) => {
     try {
         const response = await axios.post(
             'http://localhost:3000/blog/comments',
             {
+                author,
                 postId,
                 commentbody,
             }

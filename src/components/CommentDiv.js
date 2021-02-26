@@ -1,10 +1,14 @@
 import React from 'react';
 
-const CommentDiv = ({ commentbody, time }) => {
+const CommentDiv = ({ author, commentbody, time }) => {
     return (
-        <div className="comment-div-container">
+        <div
+            style={{ border: '1px solid black', margin: '5px' }}
+            className="comment-div-container"
+        >
             <p>{commentbody}</p>
-            <p>{time}</p>
+            <p>Created: {time}</p>
+            <p>By: {author}</p>
         </div>
     );
 };
