@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import PostPage from './pages/PostPage';
 import './App.css';
@@ -8,7 +9,7 @@ const App = () => {
     return (
         <div className="App">
             <Router>
-                {/* NavBar */}
+                <NavBar />
                 <Switch>
                     <Route exact path="/" render={() => <Home />} />
                     <Route

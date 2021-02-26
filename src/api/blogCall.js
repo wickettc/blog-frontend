@@ -20,4 +20,19 @@ const getBlogPost = async (matchURL) => {
     }
 };
 
-export { getBlogPosts, getBlogPost };
+const postComment = async (postId, commentbody) => {
+    try {
+        const response = await axios.post(
+            'http://localhost:3000/blog/comments',
+            {
+                postId,
+                commentbody,
+            }
+        );
+        return response;
+    } catch (err) {
+        console.error(err);
+    }
+};
+
+export { getBlogPosts, getBlogPost, postComment };

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const PostDiv = ({ id, title, message, time }) => {
-    console.log(id);
     return (
         <div
             style={{ border: '1px solid black', margin: '5px' }}

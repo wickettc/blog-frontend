@@ -8,6 +8,7 @@ const PostPage = ({ match }) => {
     const [post, setPost] = useState({});
     const [comments, setComments] = useState([]);
     const [showAddComment, setShowAddComment] = useState(false);
+    const [commentSubmitted, setCommentSubmitted] = useState(false);
 
     useEffect(() => {
         const fetchData = async (matchURL) => {
@@ -16,10 +17,15 @@ const PostPage = ({ match }) => {
             setComments(res.comments);
         };
         fetchData(match.params.id);
-    }, [match.params.id]);
+        // make sure commentSubmitted is false after fetch
+        setCommentSubmitted(false);
+    }, [match.params.id, commentSubmitted]);
 
-    const handleClose = () => {
+    const handleClose = (wasSubmitted) => {
         setShowAddComment(false);
+        // by updating commentSubmitted, we cause refetching of data to display the
+        // newly added comment
+        wasSubmitted ? setCommentSubmitted(true) : setCommentSubmitted(false);
     };
 
     return (
