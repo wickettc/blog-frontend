@@ -40,6 +40,7 @@ const PostPage = ({ match }) => {
                     <div className="post-container">
                         <h2>{post.title}</h2>
                         <p>{post.message}</p>
+                        <p>A blog post by: {post.author}</p>
                     </div>
                     <div className="comments-container">
                         <h3>Comments</h3>
