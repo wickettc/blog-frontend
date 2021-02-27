@@ -12,8 +12,6 @@ const AddComment = ({ handleClose, id }) => {
         } else {
             setAuthor(e.target.value);
         }
-        console.log(commentbody, 'com');
-        console.log(author, 'author');
     };
 
     const handleSubmit = (e) => {
