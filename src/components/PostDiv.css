@@ -1,0 +1,22 @@
+.post-div-container {
+    border: 1px solid white;
+    padding: 3%;
+    margin: 1%;
+    background-color: #006442;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.post-div-container a {
+    width: auto;
+    color: white;
+    text-decoration: none;
+}
+
+.post-div-container a :hover {
+    color: #26c281;
+    text-decoration: underline;
+    transform: scale(1.1);
+}

@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './PostDiv.css';
 
 const PostDiv = ({ id, title, message, time }) => {
     return (
-        <div
-            style={{ border: '1px solid black', margin: '5px' }}
-            className="post-div-container"
-        >
+        <div className="post-div-container">
             <Link to={`/post/${id}`}>
                 <h2> {title} </h2>
             </Link>
-            <p> {message} </p>
-            <p> {time} </p>
+            {/* <p> {message} </p> */}
+            <p>
+                Created: <span className="italics">{time} </span>
+            </p>
         </div>
     );
 };

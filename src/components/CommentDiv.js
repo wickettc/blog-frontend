@@ -1,14 +1,17 @@
 import React from 'react';
+import './CommentDiv.css';
 
 const CommentDiv = ({ author, commentbody, time }) => {
     return (
-        <div
-            style={{ border: '1px solid black', margin: '5px' }}
-            className="comment-div-container"
-        >
-            <p>{commentbody}</p>
-            <p>Created: {time}</p>
-            <p>By: {author}</p>
+        <div className="comment-div-container">
+            <p className="comment-body">{commentbody}</p>
+            <p>
+                Created: <span className="italics">{time}</span>
+            </p>
+            <p>
+                By: <span className="italics">{author}</span>
+            </p>
+            <hr />
         </div>
     );
 };

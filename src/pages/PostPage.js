@@ -3,6 +3,7 @@ import CommentDiv from '../components/CommentDiv';
 import AddComment from '../components/AddComment';
 import { getBlogPost } from '../api/blogCall';
 import _ from 'lodash';
+import './PostPage.css';
 
 const PostPage = ({ match }) => {
     const [post, setPost] = useState({});
@@ -30,25 +31,36 @@ const PostPage = ({ match }) => {
 
     return (
         <div>
-            {showAddComment ? (
-                <AddComment id={post._id} handleClose={handleClose} />
-            ) : null}
             {_.isEmpty(post) ? (
                 <div className="loader"></div>
             ) : (
-                <div>
-                    <div className="post-container">
+                <div className="post-page-container">
+                    <div>
                         <h2>{post.title}</h2>
-                        <p>{post.message}</p>
-                        <p>A blog post by: {post.author}</p>
+                        <p className="post-message">{post.message}</p>
+                        <p className="post-page-author">
+                            A blog post by:{' '}
+                            <span className="italics">{post.author}</span>
+                        </p>
                     </div>
-                    <div className="comments-container">
-                        <h3>Comments</h3>
-                        {showAddComment ? null : (
-                            <button onClick={() => setShowAddComment(true)}>
-                                Add a Comment
-                            </button>
-                        )}
+                    <hr />
+                    <div>
+                        <div className="post-page-add-comment-container">
+                            <h3>Comments</h3>
+                            {showAddComment ? (
+                                <AddComment
+                                    id={post._id}
+                                    handleClose={handleClose}
+                                />
+                            ) : (
+                                <button
+                                    className="post-page-add-btn"
+                                    onClick={() => setShowAddComment(true)}
+                                >
+                                    Add a Comment
+                                </button>
+                            )}
+                        </div>
                         {comments.length === 0 ? (
                             <div>Nothing to display</div>
                         ) : (

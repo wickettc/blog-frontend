@@ -23,7 +23,6 @@ const AddComment = ({ handleClose, id }) => {
 
     return (
         <div className="add-comment-container">
-            <h3>Add Comment</h3>
             {/* handleClose(false) so refetch does not occur */}
             <div className="comment-close" onClick={() => handleClose(false)}>
                 <svg

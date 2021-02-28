@@ -1,7 +1,4 @@
-.add-comment-container {
-    position: absolute;
-    transform: translate(50%, 50%);
-    z-index: 10000;
+/* .add-comment-container {
     background-color: gray;
     padding: 4%;
     border: 1px solid black;
@@ -38,4 +35,32 @@
     top: 10%;
     right: 10%;
     cursor: pointer;
+} */
+
+.add-comment-container {
+    width: 80%;
+}
+
+.add-comment-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-comment-container input,
+.add-comment-container textarea {
+    width: 80%;
+    padding: 1%;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.add-comment-container button {
+    width: 30%;
+}
+
+.comment-close {
+    text-align: right;
 }

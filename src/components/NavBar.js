@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import chaseDev from '../imgs/chase_dev_logo.png';
+import './NavBar.css';
 
 const NavBar = () => {
     return (
-        <div style={{ width: '100%', backgroundColor: 'gray' }}>
-            <Link to="/">HOME</Link>
-        </div>
+        <nav>
+            <Link to="/">Chase's Blog</Link>
+            <a href="https://www.chasewickett.com">
+                <img className="nav-img" alt="My logo" src={chaseDev} />
+            </a>
+        </nav>
     );
 };
 

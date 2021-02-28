@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PostDiv from '../components/PostDiv';
 import { getBlogPosts } from '../api/blogCall';
 import _ from 'lodash';
+import './Home.css';
 
 const Home = () => {
     const [posts, setPosts] = useState([]);
@@ -27,8 +28,8 @@ const Home = () => {
     });
 
     return (
-        <div>
-            <h1>Blog</h1>
+        <div className="home-container">
+            <h1>Welcome to my Blog</h1>
             {_.isEmpty(posts) ? (
                 <div className="loader"></div>
             ) : (

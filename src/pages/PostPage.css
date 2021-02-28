@@ -1,0 +1,18 @@
+.post-page-container {
+    font-size: 1.2rem;
+}
+
+.post-message {
+    line-height: 1.75;
+    font-size: 1.3rem;
+}
+
+.post-page-author {
+    font-size: 1.1rem;
+}
+
+.post-page-add-comment-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

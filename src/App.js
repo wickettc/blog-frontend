@@ -10,14 +10,16 @@ const App = () => {
         <div className="App">
             <Router>
                 <NavBar />
-                <Switch>
-                    <Route exact path="/" render={() => <Home />} />
-                    <Route
-                        exact
-                        path="/post/:id"
-                        render={({ match }) => <PostPage match={match} />}
-                    />
-                </Switch>
+                <div className="app-container">
+                    <Switch>
+                        <Route exact path="/" render={() => <Home />} />
+                        <Route
+                            exact
+                            path="/post/:id"
+                            render={({ match }) => <PostPage match={match} />}
+                        />
+                    </Switch>
+                </div>
             </Router>
         </div>
     );

@@ -2,15 +2,53 @@ body,
 html {
     margin: 0;
     padding: 0;
+    background-color: #407a52;
+    font-family: 'Playfair Display', serif;
+}
+
+hr {
+    border-color: #006442;
+}
+
+button {
+    height: 80%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid white;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    color: white;
+    background-color: #006442;
+    transform: scale(1.1);
+    box-shadow: none;
+}
+
+.app-container {
+    padding: 3%;
+    padding-top: 0;
+}
+
+.italics {
+    font-style: italic;
 }
 
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border-top: 16px solid black; /* Blue */
     border-radius: 50%;
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
 }
 
 @keyframes spin {
