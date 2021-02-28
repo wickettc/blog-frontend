@@ -1,7 +1,9 @@
 Welcome to my blog site created with ReactJS and served by a RESTful API created with Express, MongoDB and secured with JSON Web Tokens.
 
 Live at: https://blog-frontend-wickettc.vercel.app/
+--
 API link: https://github.com/wickettc/blog-api
+--
 Admin link: https://github.com/wickettc/blog-admin
 
 ---
