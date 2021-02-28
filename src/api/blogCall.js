@@ -13,10 +13,12 @@ const getBlogPosts = async () => {
 
 const getBlogPost = async (matchURL) => {
     try {
-        const response = await axios.get(`${baseURL}blog/post/${matchURL}`);
-        return response.data;
+        const response = await axios.get(`${baseURL}blog/post/${matchURL}`, {
+            'Access-Control-Allow-Origin': '*',
+        });
+        return response;
     } catch (err) {
-        console.error(err);
+        return err;
     }
 };
 

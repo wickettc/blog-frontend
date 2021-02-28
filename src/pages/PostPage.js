@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CommentDiv from '../components/CommentDiv';
 import AddComment from '../components/AddComment';
 import { getBlogPost } from '../api/blogCall';
+import { useHistory } from 'react-router-dom';
 import _ from 'lodash';
 import './PostPage.css';
 
@@ -10,17 +11,22 @@ const PostPage = ({ match }) => {
     const [comments, setComments] = useState([]);
     const [showAddComment, setShowAddComment] = useState(false);
     const [commentSubmitted, setCommentSubmitted] = useState(false);
+    const history = useHistory();
 
     useEffect(() => {
         const fetchData = async (matchURL) => {
             const res = await getBlogPost(matchURL);
-            setPost(res.post);
-            setComments(res.comments);
+            if (res.status === 200) {
+                setPost(res.data.post);
+                setComments(res.data.comments);
+            } else {
+                history.push('/*');
+            }
         };
         fetchData(match.params.id);
         // make sure commentSubmitted is false after fetch
         setCommentSubmitted(false);
-    }, [match.params.id, commentSubmitted]);
+    }, [match.params.id, commentSubmitted, history]);
 
     const handleClose = (wasSubmitted) => {
         setShowAddComment(false);
