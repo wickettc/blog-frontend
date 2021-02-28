@@ -7,7 +7,7 @@ const NavBar = () => {
     return (
         <nav>
             <Link to="/">Chase's Blog</Link>
-            <a href="https://www.chasewickett.com">
+            <a target="__blank" href="https://www.chasewickett.com">
                 <img className="nav-img" alt="My logo" src={chaseDev} />
             </a>
         </nav>
