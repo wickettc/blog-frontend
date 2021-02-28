@@ -23,7 +23,10 @@ const App = () => {
                     </Switch>
                 </div>
                 <div className="github-link">
-                    <a href="https://github.com/wickettc/blog-frontend">
+                    <a
+                        target="__blank"
+                        href="https://github.com/wickettc/blog-frontend"
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="30"
