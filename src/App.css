@@ -33,6 +33,20 @@ button:hover {
     padding-top: 0;
 }
 
+.github-link {
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+
+.github-link a svg {
+    fill: #6c8c75;
+}
+
+.github-link a svg:hover {
+    fill: #56695b;
+}
+
 .italics {
     font-style: italic;
 }
