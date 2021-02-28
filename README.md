@@ -2,6 +2,7 @@ Welcome to my blog site created with ReactJS and served by a RESTful API created
 
 Live at: https://blog-frontend-wickettc.vercel.app/
 API link: https://github.com/wickettc/blog-api
+Admin link: https://github.com/wickettc/blog-admin
 
 ---
 
