@@ -1,42 +1,3 @@
-/* .add-comment-container {
-    background-color: gray;
-    padding: 4%;
-    border: 1px solid black;
-    border-radius: 25%;
-    width: 40%;
-    height: 30%;
-}
-
-.add-comment-container h3 {
-    text-align: center;
-}
-
-.add-comment-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80%;
-}
-
-.add-comment-container input,
-.add-comment-container textarea {
-    width: 80%;
-    margin: 5px;
-}
-
-.add-comment-container button {
-    width: 50%;
-}
-
-.comment-close {
-    display: inline-block;
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    cursor: pointer;
-} */
-
 .add-comment-container {
     width: 80%;
 }
@@ -63,4 +24,10 @@
 
 .comment-close {
     text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .add-comment-container button {
+        width: 80%;
+    }
 }

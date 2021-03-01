@@ -4,6 +4,7 @@ html {
     padding: 0;
     background-color: #407a52;
     font-family: 'Playfair Display', serif;
+    color: white;
 }
 
 hr {
@@ -28,13 +29,21 @@ button:hover {
     box-shadow: none;
 }
 
+@media only screen and (max-width: 767px) {
+    button:hover {
+        color: black;
+        background-color: white;
+        transform: none;
+    }
+}
+
 .app-container {
     padding: 3%;
     padding-top: 0;
 }
 
 .github-link {
-    position: absolute;
+    position: fixed;
     top: 30%;
     right: 0;
 }
