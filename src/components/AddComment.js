@@ -40,7 +40,7 @@ const AddComment = ({ handleClose, id }) => {
                     type="text"
                     name="author"
                     value={author}
-                    placeholder="Author"
+                    placeholder="Your Name"
                     required
                 />
                 <input type="hidden" value={id} name="postId" />
